@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <div class="payment-container">
+    <h1 class="heading">VERONA'24</h1>
+
+    <div class="google-pay">
+      <img src="Google_Pay_GPay_Logo-512.webp" alt="Google Pay UPI">
+      <p class="upi-id">UPI ID: fairwell191@okhdfcbank</p>
+    </div>
+    
+    <form id="payment-form" action="http://localhost:3000/submit-payment" method="post" enctype="multipart/form-data">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="payment-screenshot">Upload Payment Screenshot:</label>
+      <input type="file" id="payment-screenshot" name="payment-screenshot" accept="image/*" required>
+
+      <button type="submit">Submit Payment</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
